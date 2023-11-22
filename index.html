@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <h2>Programa Para Calcular Los Sueldos</h2>
+        
+        <div class="input-container">
+            <label for="sueldo">Ingrese el Sueldo:</label>
+            <input type="number" id="sueldo">
+        </div>
+        
+        <button onclick="mostrarIngresoAdelantos()">Ingresar Adelantos</button>
+        
+        <div id="adelantosSection" style="display: none;">
+            <p>Ingrese los adelantos uno por uno:</p>
+            <input type="number" id="adelanto">
+            <button onclick="ingresarAdelanto()">Agregar Adelanto</button>
+            <ul id="adelantosList"></ul>
+        </div>
+        
+        <p>Ingrese el número correspondiente al descuento deseado:</p>
+        <ul>
+            <li><button onclick="calcularDescuento(20)">1. Platos de Q20</button></li>
+            <li><button onclick="calcularDescuento(25)">2. Platos de Q25</button></li>
+            <li><button onclick="calcularDescuento(30)">3. Platos de Q30</button></li>
+            <li><button onclick="calcularDescuento(5)">4. Gaseosa (Coca) Q5</button></li>
+            <li><button onclick="calcularDescuento(7)">5. Gaseosa (Pepsi) Grande Q7</button></li>
+            <li><button onclick="ingresarOtroDescuento()">6. Ingresar Otro Descuento</button></li>
+        </ul>
+        
+        <div id="descuentosSection">
+            <p>Descuentos ingresados:</p>
+            <ul id="descuentosList"></ul>
+        </div>
+        
+        <div id="descuentosResult"></div>
+        
+        <button onclick="calcularSueldo()">Calcular Sueldo</button>
+        <button onclick="borrarElementos()">Borrar Elementos</button>
+        
+        <p id="resultado" style="display: none;">El Sueldo A Pagar Es: Q<span id="sueldoFinal"></span></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
